@@ -1,0 +1,15 @@
+{
+    "role": {
+    "exeName":"@APP_DIR@/bin/navit",
+    "type": "regular",
+    "allowedNames": ["@APP_ID@",""]
+    },
+    "permissions": [
+        {
+         "service":"@APP_ID@",
+         "outbound":["*"],
+         "inbound":[]
+        }
+    ]
+}
+

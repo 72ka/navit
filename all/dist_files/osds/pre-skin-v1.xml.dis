@@ -1,0 +1,40 @@
+<!-- osd items allow to position display and control items directly on top of the map: -->
+
+<!-- http://wiki.navit-project.org/index.php/OSD_Layouts -->
+<!-- background images -->
+<osd enabled="yes" type="button" x="-99" y="0" align="10" w="56" h="270"  command="" src="skin/top-right-pre.png" />
+<!-- Big -->
+<osd enabled="no" type="button" x="0" y="0" align="10" w="197" h="80"  command="" src="skin/top-left-pre.png" />
+<osd enabled="no" type="button" x="0" y="-140" align="2"  command="" src="skin/bottom-left-pre.png" />
+<!-- Small -->
+<osd enabled="yes" type="button" x="0" y="0" align="10" w="110" h="100"  command="" src="skin/top-left-pre-small.png" />
+<osd enabled="yes" type="button" x="0" y="-140" align="2"  command="" src="skin/bottom-left-pre-small.png" />
+
+
+<!-- menu right/top-right -->
+<osd enabled="yes" type="toggle_announcer"	x="-50"	y="6" w="45"	h="45"	icon_src="$NAVIT_SHAREDIR/xpm/skin/%s_48_48.png" background_color="#646FC3cc"/>
+<osd enabled="yes"  type="button"    x="-52" y="52"  w="50" h="50" command="zoom_in()" src="skin/empty.png"/>
+<osd enabled="yes"  type="button"    x="-52" y="102" w="50" h="50" command="zoom_out()" src="skin/empty.png"/>
+<osd enabled="yes"  type="button"    x="-52" y="152" w="50" h="50" command="zoom_to_route()" src="skin/empty.png"/>
+
+<!-- bottom-left elements -->
+<osd enabled="yes" type="text" label="${navigation.item.street_name} ${navigation.item.street_name_systematic}" x="4" y="-40" w="297" h="20" align="4" background_color="#646FC3cc" font_size="330" />
+<osd enabled="yes" type="text" label="=> ${navigation.item[1].street_name} ${navigation.item[1].street_name_systematic}" x="4" y="-22" w="297" h="20" align="4" background_color="#646FC3cc" font_size="330" />
+<osd enabled="yes" type="text" label="${navigation.item[1].length[named]}" x="4" y="-65" w="80" h="25" align="15"  background_color="#646FC3cc" font_size="370"/>
+<osd enabled="yes" type="navigation_next_turn"	x="15" y="-115"	w="48"	h="48"	align="0" background_color="#646FC3cc" icon_src="$NAVIT_SHAREDIR/xpm/%s_wh_48_48.png" />
+<!-- Small -->
+<osd enabled="yes" type="text" label="${navigation.item.destination_time[arrival]} * ${navigation.item.destination_time[remaining]} * ${navigation.item.destination_length[named]}" x="95" y="-61" w="180" h="16" align="4" background_color="#646FC3cc" font_size="250" />
+
+<!-- top-left -->
+<!-- Big -->
+<osd enabled="no" type="text" label="R: ${vehicle.position_radius}m"   x="5"   y="8" w="130" h="20"  align="4" font_size="250" background_color="#646FC3cc"/> 
+<osd enabled="no" type="text" label="Dist: ${navigation.item.destination_length[named]}" x="5" y="28" w="120" h="20" align="4" background_color="#646fc3cc" font_size="250" />           
+<osd enabled="no" type="text" label="ETA: ${navigation.item.destination_time[arrival]}" x="5"	y="48"	w="90"	h="20"	align="4" background_color="#646fc3cc" font_size="250" />
+<osd enabled="no" type="text" label="TL: ${navigation.item.destination_time[remaining]}" x="5" y="68" w="80"	h="20"	align="4" background_color="#646fc3cc" font_size="250" />
+<osd enabled="no" type="text" label="${vehicle.position_speed}" x="2"	y="88"	w="94" h="30"	align="4" background_color="#646fc3cc" font_size="400"/>
+<osd enabled="no" type="text" label="${tracking.item.route_speed}" x="21" y="122" w="53" h="25" align="4" background_color="#ff0000cc" font_size="300"/>
+<!-- Small -->
+<osd enabled="yes" type="text" label="R: ${vehicle.position_radius}m"   x="5"   y="0" w="80" h="20"  align="4" font_size="250" background_color="#646FC3cc"/> 
+<osd enabled="yes" type="text" label="${vehicle.position_speed}" x="4"	y="20"	w="90" h="25"	align="4" background_color="#646fc3cc" font_size="400"/>
+<osd enabled="yes" type="text" label="${tracking.item.route_speed}" x="21" y="54" w="53" h="25" align="4" background_color="#ff0000cc" font_size="300"/>
+
